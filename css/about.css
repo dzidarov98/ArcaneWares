@@ -1,0 +1,33 @@
+body {
+    font-family: "Times New Roman";
+    text-align: center;
+}
+
+p {
+    
+    color: blueviolet;
+}
+
+.about {
+    background: burlywood;
+    padding: 8px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+.columns {
+    float: left;
+    margin-right: 16px;
+    margin: 10px;
+    width: 20%;
+
+}
+
+.cards {
+    box-shadow: 0px 4px 8px 0 #cc80ff;
+    margin: 10px;
+    padding: 0 16px 0 16px
+}
