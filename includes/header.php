@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,7 +23,7 @@
     </script>
         <link rel="stylesheet" href="../css/signup.css">
 
-    </head>
+</head>
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Arcane Wares</a>
@@ -30,21 +34,30 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
-                </li>
+            <?php
+                if(!isset($_SESSION['uid'])) {
+                    echo '<li class="nav-item">
+                    <a class="nav-link" href="login.php">Login</a>
+                    </li>';
+                }else{
+                    echo '<li class="nav-item">
+                    <a class="nav-link" href="includes/logout.php">Logout</a>
+                    </li>';
+                }
+            ?> 
+               
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../about.php">Home <span class="sr-only">(current)</span></a>
                 </li> 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Reviews
+                        Wares
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Replace Me</a>
+                        <a class="dropdown-item" href="#">Enchantments</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Replace Me 2</a>
+                        <a class="dropdown-item" href="#">Trinkets</a>
                     </div>
                 </li>
             </ul>
