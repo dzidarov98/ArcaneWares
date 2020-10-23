@@ -19,7 +19,7 @@ $sql = "SELECT * FROM reviews WHERE item_id='$item_id'";
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result) > 0){
-    while($row=mysqli_fetch_assoc($result)){
+    while($row = mysqli_fetch_assoc($result)){
         $uname = $row['uname'];
         $prosql = "SELECT picpath from profile WHERE uname='$uname';";
         $result = mysqli_query($conn, $prosql);
@@ -27,8 +27,8 @@ if(mysqli_num_rows($result) > 0){
 
         echo '
         <div class="card mx-auto" style="width: 30%; padding: 5px; margin-bottom: 10px;">
-            <div class="media>
-                <img class="mr-3" src="'.$picpath['picpath'].'" style="max-width: 75px; max-heigh: 75px; border-radius: 50%;">
+            <div class="media">
+                <img class="mr-3" src="'.$picpath['picpath'].'" style="max-width: 75px; max-height: 75px; border-radius: 50%;">
                 <div class="media-body">
                     <h4 class="mt-0">'.$row['uname'].'</h4>
                     <h5 class="mt-0">'.$row['title'].'</h5>
