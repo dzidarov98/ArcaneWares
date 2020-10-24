@@ -23,7 +23,7 @@ if(mysqli_num_rows($result) > 0){
         $uname = $row['uname'];
         $prosql = "SELECT picpath from profile WHERE uname='$uname';";
         $result = mysqli_query($conn, $prosql);
-        $picpath = mysqli_fetch_assoc($res);
+        $picpath = mysqli_fetch_assoc($result);
 
         echo '
         <div class="card mx-auto" style="width: 30%; padding: 5px; margin-bottom: 10px;">
