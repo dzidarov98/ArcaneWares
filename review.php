@@ -33,7 +33,7 @@ require 'includes/review-helper.php';
 </main>
 <script type="text/javascript">
 
-var rateindex= -1;
+var rateIndex= -1;
 var id = <?php echo $_GET['id'];?>;
 $(document).ready(function() {
     reset_star();
@@ -73,7 +73,7 @@ $(document).ready(function() {
         for(var i=0; i < max; i++){
             $('.star-rev:eq(' + i + ')').css('color', 'goldenrod');
         }
-        document.getElementById('rating').value = parseInt(localstorage.getItem('rating'));
+        document.getElementById('rating').value = parseInt(localStorage.getItem('rating'));
         console.log(id);
     }
 
