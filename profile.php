@@ -69,14 +69,12 @@ if(isset($_SESSION['uid'])){
         <div class="form-group">
             <button type="submit" name="prof-submit" class="btn-outline-success btn-lg btn-block">upload</button> 
         </div>
-
-    </form>
+     </form>
     </div>
 </div>
 
 
 <?php
-
 }else{
     header("Location: login.php");
     exit();
